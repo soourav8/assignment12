@@ -49,7 +49,7 @@ const Nav = () => {
             to="/"
             className=" text-white normal-case text-xl md:text-2xl font-bold md:font-extrabold ml-2 "
           >
-            Martial Art Camp
+            Sports Camp
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
