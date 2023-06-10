@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Nav from '../Shared/Nav/Nav';
+import Nav from '../Pages/Shared/Nav/Nav';
 
 const Main = () => {
     return (
