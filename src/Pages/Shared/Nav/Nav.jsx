@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Nav.css";
+import logo from '../../../assets/logo.png'
 
 const Nav = () => {
   // const navOptions = <>
@@ -47,9 +48,9 @@ const Nav = () => {
           </div>
           <Link
             to="/"
-            className=" text-white normal-case text-xl md:text-2xl font-bold md:font-extrabold ml-2 "
+            
           >
-            Sports Camp
+           <img className="w-[120px]" src={logo} alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

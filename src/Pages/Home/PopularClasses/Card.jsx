@@ -12,7 +12,7 @@ export const Card = ({ item }) => {
 
                 </div>
             </div>
-            
+
         </div>
     );
 }
