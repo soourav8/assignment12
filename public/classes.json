@@ -1,44 +1,44 @@
 [
   {
-    "Image": "https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/5e2036e45c311d40c1f82565_children1.jpg",
-    "Name": "Swiming",
-    "Instructor name": "Devid Joe",
-    "Available seats": 20,
-    "Price": 99.99
+    "image": "https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/5e2036e45c311d40c1f82565_children1.jpg",
+    "name": "Swiming",
+    "instructorName": "Devid Joe",
+    "availableSeats": 20,
+    "price": 99.99
   },
   {
-    "Image": "https://cdn.firstcry.com/education/2022/03/21114202/670377382-696x476.jpg",
-    "Name": "Cricket",
-    "Instructor name": "Smith Brown",
-    "Available seats": 50,
-    "Price": 99.99
+    "image": "https://cdn.firstcry.com/education/2022/03/21114202/670377382-696x476.jpg",
+    "name": "Cricket",
+    "instructorName": "Smith Brown",
+    "availableSeats": 50,
+    "price": 99.99
   },
   {
-    "Image": "https://www.inspiresport.com/wp-content//uploads/2018/11/Children-playing-football.jpg",
-    "Name": "Football",
-    "Instructor name": "Emy Grey",
-    "Available seats": 30,
-    "Price": 60.00
+    "image": "https://www.inspiresport.com/wp-content//uploads/2018/11/Children-playing-football.jpg",
+    "name": "Football",
+    "instructorName": "Emy Grey",
+    "availableSeats": 30,
+    "price": 60.00
   },
   {
-    "Image": "https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/5e2036e45c311d40c1f82565_children1.jpg",
-    "Name": "Swiming",
-    "Instructor name": "Devid Joe",
-    "Available seats": 20,
-    "Price": 99.99
+    "image": "https://d2560u4h06m0te.cloudfront.net/images/2023/2/15/USATSI_20003553.jpg?width=942&quality=80&format=jpg",
+    "name": "Basketball",
+    "instructorName": "Jane Joe",
+    "availableSeats": 30,
+    "price": 69.99
   },
   {
-    "Image": "https://media.istockphoto.com/id/497568472/photo/boy-playing-cricket.jpg?s=612x612&w=0&k=20&c=l_5wcAKbTpnBqOb9tHOiyqVZmHJRmjz_3kxHpZRStfM=",
-    "Name": "Cricket",
-    "Instructor name": "Smith Brown",
-    "Available seats": 50,
-    "Price": 99.99
+    "image": "https://cdn.shopify.com/s/files/1/0703/9706/7570/articles/sports-day.jpg?v=1676379152",
+    "name": "100 Meter Run",
+    "instructorName": "Peter Brown",
+    "availableSeats": 50,
+    "price": 99.99
   },
   {
-    "Image": "https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/5e2036e45c311d40c1f82565_children1.jpg",
-    "Name": "Swiming",
-    "Instructor name": "Smith Brown",
-    "Available seats": 50,
-    "Price": 70.99
+    "image": "https://cdn.britannica.com/80/162480-050-8736AC79/People-beach-volleyball.jpg",
+    "name": "Volleyball",
+    "instructorName": "Tom Parker",
+    "availableSeats": 40,
+    "price": 85.99
   }
 ]
