@@ -4,6 +4,7 @@ import HeroDescription from "../HeroDescription/HeroDescription";
 import CarouselSection from "../CarouselSection/CarouselSection";
 import { PopularClasses } from "../PopularClasses/PopularClasses";
 import { TopInstructors } from "../TopInstructors/TopInstructors";
+import { ParentsReview } from "../ParentsReview/ParentsReview";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <HeroDescription></HeroDescription>
       <PopularClasses></PopularClasses>
       <TopInstructors></TopInstructors>
+      <ParentsReview></ParentsReview>
 
     </div>
   );
