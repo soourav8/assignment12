@@ -24,7 +24,7 @@ export const PopularClasses = (props) => {
 
 
                 {
-                    sortedClasses.map(item => <Card key={item.index} item={item}></Card>)
+                    sortedClasses.slice(0, 6).map(item => <Card key={item.index} item={item}></Card>)
 
                 }
 
