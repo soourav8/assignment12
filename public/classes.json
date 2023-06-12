@@ -3,6 +3,7 @@
     "image": "https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/5e2036e45c311d40c1f82565_children1.jpg",
     "name": "Swiming",
     "instructorName": "Devid Joe",
+    "students": 80,
     "availableSeats": 20,
     "price": 99.99
   },
@@ -10,6 +11,7 @@
     "image": "https://cdn.firstcry.com/education/2022/03/21114202/670377382-696x476.jpg",
     "name": "Cricket",
     "instructorName": "Smith Brown",
+    "students": 50,
     "availableSeats": 50,
     "price": 99.99
   },
@@ -17,6 +19,7 @@
     "image": "https://www.inspiresport.com/wp-content//uploads/2018/11/Children-playing-football.jpg",
     "name": "Football",
     "instructorName": "Emy Grey",
+    "students": 70,
     "availableSeats": 30,
     "price": 60.00
   },
@@ -24,21 +27,40 @@
     "image": "https://d2560u4h06m0te.cloudfront.net/images/2023/2/15/USATSI_20003553.jpg?width=942&quality=80&format=jpg",
     "name": "Basketball",
     "instructorName": "Jane Joe",
-    "availableSeats": 30,
+    "students": 65,
+    "availableSeats": 35,
     "price": 69.99
   },
   {
     "image": "https://cdn.shopify.com/s/files/1/0703/9706/7570/articles/sports-day.jpg?v=1676379152",
     "name": "100 Meter Run",
     "instructorName": "Peter Brown",
-    "availableSeats": 50,
+    "students": 54,
+    "availableSeats": 46,
     "price": 99.99
   },
   {
     "image": "https://cdn.britannica.com/80/162480-050-8736AC79/People-beach-volleyball.jpg",
     "name": "Volleyball",
     "instructorName": "Tom Parker",
-    "availableSeats": 40,
+    "students": 71,
+    "availableSeats": 29,
     "price": 85.99
+  },
+   {
+    "image": "https://static.toiimg.com/thumb/msid-79125381,imgsize-156304,width-400,resizemode-4/79125381.jpg",
+    "name": "Table tennis",
+    "instructorName": "Abrahm Parker",
+    "students": 90,
+    "availableSeats": 10,
+    "price": 60.99
+  },
+   {
+    "image": "https://res.cloudinary.com/little-league/image/upload/v1553005770/Screen-Shot-2018-10-04-at-3.42.49-PM-e1553005768441-5c90fcca13a22.png",
+    "name": "Baseball",
+    "instructorName": "Mark Alderson",
+    "students": 63,
+    "availableSeats":37,
+    "price": 75.99
   }
 ]

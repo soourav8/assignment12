@@ -3,12 +3,20 @@ import { Card } from "./Card";
 
 
 export const PopularClasses = (props) => {
-    const [items, setItems] = useState([]);
+    // const [items, setItems] = useState([]);
+    const [classes, setClassess] = useState([]);
     useEffect(() => {
         fetch("classes.json")
             .then(res => res.json())
-            .then(data => setItems(data))
+            .then(data => setClassess(data))
     }, [])
+
+
+    const sortedClasses = classes.sort((a, b) => b.students - a.students);
+       
+
+
+
     return (
         <>
             <p className="text-center text-3xl font-bold mt-12">Popular Classes</p>
@@ -16,7 +24,7 @@ export const PopularClasses = (props) => {
 
 
                 {
-                    items.map(item => <Card key={item.index} item={item}></Card>)
+                    sortedClasses.map(item => <Card key={item.index} item={item}></Card>)
 
                 }
 
