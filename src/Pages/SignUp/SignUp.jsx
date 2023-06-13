@@ -9,7 +9,7 @@ export const SignUp = (props) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [inputType, setInputType] = useState('password');
     const [icon, setIcon] = useState(eye);
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
 
 
 
@@ -27,6 +27,12 @@ export const SignUp = (props) => {
                 .then(result => {
                     const loggedUser = result.user;
                     console.log(loggedUser);
+                    updateUser(data.name, data.photoURL)
+                    .then(result => {
+                        console.log(result.user)
+                    })
+                    .catch(error => console.log(error.meessage))
+                    
                 })
                 .catch(error => console.log(error.message))
         }
