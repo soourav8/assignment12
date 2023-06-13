@@ -1,31 +1,34 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import eye from '../../assets/eye.png'
 import hide from '../../assets/hide.png'
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 export const SignUp = (props) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [inputType, setInputType] = useState('password');
     const [icon, setIcon] = useState(eye);
-    
-    
+    const { createUser } = useContext(AuthContext);
 
-    // const checkValidation = (e) => {
-    //     setConfirmPassword(e.target.value)
-    //     if (password !== confirmPassword) {
-    //         setError("Confirm password should be mathed")
 
-    //     };
-            
-       
-    // }
+
+    
 
 
     const onSubmit = data => {
         console.log(data)
-        if(data.password !== data.confirmPassword){
+        if (data.password !== data.confirmPassword) {
             alert("password should be mathced")
+
+        }
+        else {
+            createUser(data.email, data.password)
+                .then(result => {
+                    const loggedUser = result.user;
+                    console.log(loggedUser);
+                })
+                .catch(error => console.log(error.message))
         }
 
 
@@ -58,7 +61,7 @@ export const SignUp = (props) => {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" {...register("name",)} name="name" placeholder="name" className="input input-bordered" />
+                                <input type="text" {...register("name", { required: true })} name="name" placeholder="name" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -78,7 +81,7 @@ export const SignUp = (props) => {
                                         maxLength: 20,
                                         pattern:
                                             /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])/,
-                                    })} name="password" placeholder="password" className="input input-bordered inline-block"  />
+                                    })} name="password" placeholder="password" className="input input-bordered inline-block" />
 
 
                                     <button onClick={handlePasswordToggle}><img className="w-[30px]" src={icon} /></button>
@@ -94,12 +97,18 @@ export const SignUp = (props) => {
                                         maxLength: 20,
                                         pattern:
                                             /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])/,
-                                    })} name="confirmPassword" placeholder="confirm password" className="input input-bordered inline-block"  />
+                                    })} name="confirmPassword" placeholder="confirm password" className="input input-bordered inline-block" />
 
 
                                     <button onClick={handlePasswordToggle}><img className="w-[30px]" src={icon} /></button>
                                 </div>
-                                
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Photo URL</span>
+                                    </label>
+                                    <input type="text" {...register("photoURL", { required: true })} name="photoURL" placeholder="photoURL" className="input input-bordered" />
+                                </div>
+
 
 
 
