@@ -65,7 +65,7 @@ export const Login = (props) => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                             <label className="label">
-                                <Link to="/" className="label-text-alt link link-hover">New here  please Sign Up</Link>
+                                <Link to="/signup" className="label-text-alt link link-hover">New here  please Sign Up</Link>
                             </label>
 
 
