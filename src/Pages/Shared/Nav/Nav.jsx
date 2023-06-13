@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Nav.css";
 import logo from '../../../assets/logo.png'
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Nav = () => {
+  const { logOut, user } = useContext(AuthContext);
+  const handleLogOut = () => [
+    logOut()
+    
+  ]
   // const navOptions = <>
   // <li className="text-white font-semibold hover:bg-white hover:rounded"><NavLink   to='/'>Home</NavLink></li>
   // <li className="text-white font-semibold hover:bg-white hover:rounded"><NavLink to='/instructor'>Instructor</NavLink></li>
@@ -48,9 +54,9 @@ const Nav = () => {
           </div>
           <Link
             to="/"
-            
+
           >
-           <img className="w-[120px]" src={logo} alt="" />
+            <img className="w-[120px]" src={logo} alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -66,9 +72,24 @@ const Nav = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Login</a>
-        </div>
+        {
+          user?.email ? <>
+          <div className="navbar-end">
+          <label  className="btn btn-ghost btn-circle avatar mr-2  md:mr-5">
+              <div className="w-10 rounded-full">
+                <img src={user?.photoURL} />
+              </div>
+            </label>
+            <div >
+              <a onClick={handleLogOut} className="btn">LOGOUT</a>
+            </div>
+            
+          </div>
+            </> : <><div className="navbar-end">
+              <Link to='/login' className="btn">LOGIN</Link>
+            </div></>
+        }
+
       </div>
     </div>
   );

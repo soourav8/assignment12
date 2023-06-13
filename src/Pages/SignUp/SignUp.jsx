@@ -23,6 +23,7 @@ export const SignUp = (props) => {
 
         }
         else {
+            form.reset()
             createUser(data.email, data.password)
                 .then(result => {
                     const loggedUser = result.user;
