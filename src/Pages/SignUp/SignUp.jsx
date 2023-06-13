@@ -7,8 +7,29 @@ import { Link } from "react-router-dom";
 export const SignUp = (props) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [inputType, setInputType] = useState('password');
-    const [icon, setIcon] = useState(eye)
-    const onSubmit = data => console.log(data);
+    const [icon, setIcon] = useState(eye);
+    
+    
+
+    // const checkValidation = (e) => {
+    //     setConfirmPassword(e.target.value)
+    //     if (password !== confirmPassword) {
+    //         setError("Confirm password should be mathed")
+
+    //     };
+            
+       
+    // }
+
+
+    const onSubmit = data => {
+        console.log(data)
+        if(data.password !== data.confirmPassword){
+            alert("password should be mathced")
+        }
+
+
+    };
 
     const handlePasswordToggle = () => {
         if (inputType === 'password') {
@@ -57,14 +78,34 @@ export const SignUp = (props) => {
                                         maxLength: 20,
                                         pattern:
                                             /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])/,
-                                    })} name="password" placeholder="password" className="input input-bordered inline-block" />
-                                    
+                                    })} name="password" placeholder="password" className="input input-bordered inline-block"  />
+
 
                                     <button onClick={handlePasswordToggle}><img className="w-[30px]" src={icon} /></button>
                                 </div>
+                                <label className="label">
+                                    <span className="label-text">Password</span>
+                                </label>
+                                <div className="flex">
+
+                                    <input type={inputType} {...register("confirmPassword", {
+                                        required: true,
+                                        minLength: 6,
+                                        maxLength: 20,
+                                        pattern:
+                                            /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])/,
+                                    })} name="confirmPassword" placeholder="confirm password" className="input input-bordered inline-block"  />
 
 
+                                    <button onClick={handlePasswordToggle}><img className="w-[30px]" src={icon} /></button>
+                                </div>
                                 
+
+
+
+
+
+
 
 
                             </div>
@@ -75,22 +116,22 @@ export const SignUp = (props) => {
                                 <Link to="/login" className="label-text-alt link link-hover">If already signed please Login</Link>
                             </label>
                             <div>
-                            {errors.password?.type === "required" && (
-                                        <p className="text-red-500 ">Password is required</p>
-                                    )}
-                                    {errors.password?.type === "minLength" && (
-                                        <p className="text-red-500 ">Password must be 6 characters</p>
-                                    )}
-                                    {errors.password?.type === "maxLength" && (
-                                        <p className="text-red-500 ">
-                                            Password must be less than 20 characters
-                                        </p>
-                                    )}
-                                    {errors.password?.type === "pattern" && (
-                                        <p className="text-red-500 text-center">
-                                            Password must have one uppercase one lowercase and one
-                                            number one special character
-                                        </p>)}
+                                {errors.password?.type === "required" && (
+                                    <p className="text-red-500 ">Password is required</p>
+                                )}
+                                {errors.password?.type === "minLength" && (
+                                    <p className="text-red-500 ">Password must be 6 characters</p>
+                                )}
+                                {errors.password?.type === "maxLength" && (
+                                    <p className="text-red-500 ">
+                                        Password must be less than 20 characters
+                                    </p>
+                                )}
+                                {errors.password?.type === "pattern" && (
+                                    <p className="text-red-500 text-center">
+                                        Password must have one uppercase one lowercase and one
+                                        number one special character
+                                    </p>)}
                             </div>
 
 
