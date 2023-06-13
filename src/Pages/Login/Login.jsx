@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import eye from '../../assets/eye.png'
 import hide from '../../assets/hide.png'
+import { Link } from "react-router-dom";
 
 
 
@@ -63,6 +64,9 @@ export const Login = (props) => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>
+                            <label className="label">
+                                <Link to="/" className="label-text-alt link link-hover">New here  please Sign Up</Link>
+                            </label>
 
 
                         </div>
