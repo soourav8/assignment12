@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import eye from '../../assets/eye.png'
 import hide from '../../assets/hide.png'
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 
@@ -10,7 +11,20 @@ export const Login = (props) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [inputType, setInputType] = useState('password');
     const [icon, setIcon] = useState(eye)
-    const onSubmit = data => console.log(data);
+    const {logIn} = useContext(AuthContext);
+
+
+
+    const onSubmit = data => {
+        console.log(data)
+        logIn(data.email, data.password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser)
+        })
+        .catch(error => console.log(error.message))
+        
+    };
 
     const handlePasswordToggle = () => {
         if (inputType === 'password') {
