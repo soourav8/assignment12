@@ -6,7 +6,7 @@ export const PopularClasses = (props) => {
     // const [items, setItems] = useState([]);
     const [classes, setClassess] = useState([]);
     useEffect(() => {
-        fetch("classes.json")
+        fetch("http://localhost:5000/classes")
             .then(res => res.json())
             .then(data => setClassess(data))
     }, [])
