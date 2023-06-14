@@ -4,7 +4,7 @@ import { ClassesCard } from './ClassesCard';
 const Classes = () => {
     const [classes, setClasses] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5000/classes")
+        fetch("https://b7a12-summer-camp-server-side-soourav8.vercel.app/classes")
         .then(res => res.json())
         .then(data => setClasses(data))
     },[])

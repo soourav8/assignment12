@@ -5,7 +5,7 @@ import { Card } from "../PopularClasses/Card";
 export const TopInstructors = (props) => {
     const [items, setItems] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5000/instructors")
+        fetch("https://b7a12-summer-camp-server-side-soourav8.vercel.app/instructors")
         .then(res => res.json())
         .then(data => setItems(data))
     } , [])
