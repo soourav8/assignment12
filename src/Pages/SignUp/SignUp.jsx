@@ -23,11 +23,20 @@ export const SignUp = (props) => {
 
         }
         else {
-            form.reset()
+            
             createUser(data.email, data.password)
                 .then(result => {
+
                     const loggedUser = result.user;
                     console.log(loggedUser);
+                    const saveUser = { name: data.name, email: data.email }
+                        fetch('http://localhost:5000/users', {
+                            method: 'POST',
+                            headers: {
+                                'content-type': 'application/json'
+                            },
+                            body: JSON.stringify(saveUser)
+                        })
                     updateUser(data.name, data.photoURL)
                     .then(result => {
                         console.log(result.user)
