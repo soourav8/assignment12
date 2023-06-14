@@ -26,6 +26,7 @@ export const SignUp = (props) => {
             
             createUser(data.email, data.password)
                 .then(result => {
+                    reset();
 
                     const loggedUser = result.user;
                     console.log(loggedUser);

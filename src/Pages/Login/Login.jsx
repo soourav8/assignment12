@@ -2,8 +2,9 @@ import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import eye from '../../assets/eye.png'
 import hide from '../../assets/hide.png'
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { SocialLogin } from "../Shared/SocialLogin/SocialLogin";
 
 
 
@@ -13,6 +14,10 @@ export const Login = (props) => {
     const [icon, setIcon] = useState(eye)
     const {logIn} = useContext(AuthContext);
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
 
 
     const onSubmit = data => {
@@ -21,6 +26,8 @@ export const Login = (props) => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser)
+            navigate(form , {replace : true})
+
         })
         .catch(error => console.log(error.message))
         
@@ -83,6 +90,7 @@ export const Login = (props) => {
                             </label>
 
 
+            <SocialLogin></SocialLogin>
                         </div>
                     </div>
                     </div>
